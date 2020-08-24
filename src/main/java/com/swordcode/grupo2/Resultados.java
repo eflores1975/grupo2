@@ -41,12 +41,26 @@ public class Resultados extends Porcentaje {
 		return String.format("%.1f%%", result);
 	}
 
+	public String getCss() {
+		String css = "text-danger";
+		String nivel = getNivel();
+		if (nivel.equals(NivelSuperior)) {
+			css = "text-primary";
+		} else if (nivel.equals(NivelMedio)) {
+			css = "text-success";
+		} else if (nivel.equals(NivelRegular)) {
+			css = "text-warning";	
+		}
+		return css;
+	}
+	
+
 	@Override
 	public String getNivel() {
 		BigDecimal result = getPct();
-		if (result.compareTo(PctNivelSuperior) >= 0) return "Nivel superior";
-		else if (result.compareTo(PctNivelMedio) >= 0) return "Nivel medio";
-		else if (result.compareTo(PctNivelRegular) >= 0) return "Nivel regular";
-		return "Fuera de nivel";
+		if (result.compareTo(PctNivelSuperior) >= 0) return NivelSuperior;
+		else if (result.compareTo(PctNivelMedio) >= 0) return NivelMedio;
+		else if (result.compareTo(PctNivelRegular) >= 0) return NivelRegular;
+		return FueraDeNivel;
 	}
 }

@@ -28,6 +28,7 @@ public class ResultadosServlet extends HttpServlet {
 		Date date = new Date();
 		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 		String dateStr =  dateFormat.format(date);
+
 		request.setAttribute("dateStr", dateStr);
 		request.setAttribute("resultado", resultado);
 		RequestDispatcher dispatcher = request.getRequestDispatcher(

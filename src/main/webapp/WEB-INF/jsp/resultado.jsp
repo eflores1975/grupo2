@@ -65,8 +65,8 @@
                       <td class="td-bordered" width="25%"></td>
                       <td class="td-bordered" width="25%"></td>
                       <td width="15%">Porcentaje Obtenido</td>
-                      <td width="10%">${resultado.pctStr}</td>
-                      <td width="25%">${resultado.nivel}</td>
+                      <td width="10%" class="${resultado.css}">${resultado.pctStr}</td>
+                      <td width="25%" class="${resultado.css}">${resultado.nivel}</td>
                   </tr>
               </tbody>
         </table>

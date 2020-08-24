@@ -8,7 +8,13 @@ public abstract class Porcentaje {
 
 	protected static final BigDecimal	PctNivelSuperior 	= new BigDecimal("0.9");
 	protected static final BigDecimal	PctNivelMedio 		= new BigDecimal("0.75");
-    protected static final BigDecimal	PctNivelRegular 	= new BigDecimal("0.5");
+	protected static final BigDecimal	PctNivelRegular 	= new BigDecimal("0.5");
+
+	protected static final String	NivelSuperior 		= "Nivel superior";
+	protected static final String	NivelMedio 			= "Nivel medio";
+	protected static final String	NivelRegular 		= "Nivel regular";
+	protected static final String	FueraDeNivel 		= "Fuera de nivel";
+
 
     public Porcentaje(int totalPreguntas, int totalCorrectas) {
 		this.totalPreguntas = totalPreguntas;
